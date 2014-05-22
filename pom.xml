@@ -17,12 +17,12 @@
         </repository>
     </repositories>
 
-	<groupId>com.hubspot.dropwizard</groupId>
-	<artifactId>dropwizard-guice</artifactId>
+	<groupId>br.com.ingenieux</groupId>
+	<artifactId>dropwizard-governator</artifactId>
 	<version>0.7.0.2</version>
-	<name>Dropwizard Guice Support</name>
+	<name>Dropwizard Governator Support</name>
 	<description>Simple library for using Guice DI in a dropwizard service.</description>
-	<url>https://github.com/HubSpot/dropwizard-guice</url>
+	<url>https://github.com/ingenieux/dropwizard-governator</url>
 
 	<licenses>
 		<license>
@@ -44,6 +44,10 @@
 			<name>Elias Torres</name>
 			<email>elias@hubspot.com</email>
 		</developer>
+		<developer>
+			<id>aldrinleal</id>
+			<name>Aldrin Leal</name>
+		</developer>
 	</developers>
 
 	<dependencies>
@@ -52,6 +56,16 @@
             <artifactId>dropwizard-core</artifactId>
             <version>0.7.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.netflix.governator</groupId>
+            <artifactId>governator</artifactId>
+            <version>1.2.12</version>
+        </dependency>
+        <dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-servlet</artifactId>
+			<version>3.0</version>
+		</dependency>
 		<dependency>
 			<groupId>com.google.inject.extensions</groupId>
 			<artifactId>guice-servlet</artifactId>

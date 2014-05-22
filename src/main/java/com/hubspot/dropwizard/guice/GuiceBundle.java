@@ -1,20 +1,20 @@
 package com.hubspot.dropwizard.guice;
 
-import io.dropwizard.Configuration;
-import io.dropwizard.ConfiguredBundle;
-import io.dropwizard.setup.Bootstrap;
-import io.dropwizard.setup.Environment;
 import com.google.common.base.Function;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
-import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.Stage;
 import com.google.inject.servlet.GuiceFilter;
+import com.netflix.governator.guice.LifecycleInjector;
 import com.sun.jersey.api.core.ResourceConfig;
 import com.sun.jersey.spi.container.servlet.ServletContainer;
+import io.dropwizard.Configuration;
+import io.dropwizard.ConfiguredBundle;
+import io.dropwizard.setup.Bootstrap;
+import io.dropwizard.setup.Environment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -102,7 +102,7 @@ public class GuiceBundle<T extends Configuration> implements ConfiguredBundle<T>
 
     private void initInjector() {
         try {
-	        injector = Guice.createInjector(this.stage, modules);
+	        injector = LifecycleInjector.builder().inStage(this.stage).withModules(modules).build().createInjector();
         } catch(Exception ie) {
 		    logger.error("Exception occurred when creating Guice Injector - exiting", ie);
 		    System.exit(1);
