@@ -17,7 +17,7 @@
         </repository>
     </repositories>
 
-	<groupId>br.com.ingenieux</groupId>
+	<groupId>br.com.ingenieux.dropwizard</groupId>
 	<artifactId>dropwizard-governator</artifactId>
 	<version>0.7.0.3-SNAPSHOT</version>
 	<name>Dropwizard Governator Support</name>
