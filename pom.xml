@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
+        <artifactId>oss-parent</artifactId>
+        <groupId>org.sonatype.oss</groupId>
+        <version>7</version>
+    </parent>
 
     <repositories>
         <repository>
@@ -25,36 +25,37 @@
 	<url>https://github.com/ingenieux/dropwizard-governator</url>
 
 	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
 	<scm>
-		<connection>scm:git:git@github.com:ingenieux/dropwizard-governator.git</connection>
-		<developerConnection>scm:git:git@github.com:ingenieux/dropwizard-governator.git</developerConnection>
-		<url>git@github.com:ingenieux/dropwizard-governator.git</url>
-	</scm>
+        <connection>scm:git:git@github.com:ingenieux/dropwizard-governator.git</connection>
+        <developerConnection>scm:git:git@github.com:ingenieux/dropwizard-governator.git
+        </developerConnection>
+        <url>git@github.com:ingenieux/dropwizard-governator.git</url>
+    </scm>
 
 	<developers>
-		<developer>
-			<id>eliast</id>
-			<name>Elias Torres</name>
-			<email>elias@hubspot.com</email>
-		</developer>
-		<developer>
-			<id>aldrinleal</id>
-			<name>Aldrin Leal</name>
-		</developer>
-	</developers>
+        <developer>
+            <id>aldrinleal</id>
+            <name>Aldrin Leal</name>
+        </developer>
+        <developer>
+            <id>eliast</id>
+            <name>Elias Torres</name>
+            <email>elias@hubspot.com</email>
+        </developer>
+    </developers>
 
 	<dependencies>
         <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-core</artifactId>
-            <version>0.7.0</version>
+            <groupId>com.google.inject.extensions</groupId>
+            <artifactId>guice-servlet</artifactId>
+            <version>3.0</version>
         </dependency>
         <dependency>
             <groupId>com.netflix.governator</groupId>
@@ -62,32 +63,27 @@
             <version>1.2.12</version>
         </dependency>
         <dependency>
-			<groupId>com.google.inject.extensions</groupId>
-			<artifactId>guice-servlet</artifactId>
-			<version>3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.inject.extensions</groupId>
-			<artifactId>guice-servlet</artifactId>
-			<version>3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.jersey.contribs</groupId>
-			<artifactId>jersey-guice</artifactId>
-			<version>1.18.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.reflections</groupId>
-			<artifactId>reflections</artifactId>
-			<version>0.9.9-RC2</version>
-			<exclusions>
-				<exclusion>
-					<groupId>com.google.guava</groupId>
-					<artifactId>guava</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-	</dependencies>
+            <groupId>com.sun.jersey.contribs</groupId>
+            <artifactId>jersey-guice</artifactId>
+            <version>1.18.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.9-RC2</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -95,11 +91,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.5</version>
-                <configuration>
-                    <!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
             </plugin>
 
             <plugin>
