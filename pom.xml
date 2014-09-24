@@ -18,7 +18,7 @@
 
 	<groupId>br.com.ingenieux.dropwizard</groupId>
 	<artifactId>dropwizard-governator</artifactId>
-	<version>0.7.0.3</version>
+	<version>0.7.0.4-SNAPSHOT</version>
 	<name>Dropwizard Governator Support</name>
 	<description>Simple library for using Guice DI in a dropwizard service.</description>
 	<url>https://github.com/ingenieux/dropwizard-governator</url>
