@@ -19,7 +19,7 @@
 
 	<groupId>br.com.ingenieux</groupId>
 	<artifactId>dropwizard-governator</artifactId>
-	<version>0.7.0.2</version>
+	<version>0.7.0.3-SNAPSHOT</version>
 	<name>Dropwizard Governator Support</name>
 	<description>Simple library for using Guice DI in a dropwizard service.</description>
 	<url>https://github.com/ingenieux/dropwizard-governator</url>
@@ -33,9 +33,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:git@github.com:HubSpot/dropwizard-guice.git</connection>
-		<developerConnection>scm:git:git@github.com:HubSpot/dropwizard-guice.git</developerConnection>
-		<url>git@github.com:HubSpot/dropwizard-guice.git</url>
+		<connection>scm:git:git@github.com:ingenieux/dropwizard-governator.git</connection>
+		<developerConnection>scm:git:git@github.com:ingenieux/dropwizard-governator.git</developerConnection>
+		<url>git@github.com:ingenieux/dropwizard-governator.git</url>
 	</scm>
 
 	<developers>
@@ -79,7 +79,7 @@
 		<dependency>
 			<groupId>org.reflections</groupId>
 			<artifactId>reflections</artifactId>
-			<version>0.9.8</version>
+			<version>0.9.9-RC2</version>
 			<exclusions>
 				<exclusion>
 					<groupId>com.google.guava</groupId>
