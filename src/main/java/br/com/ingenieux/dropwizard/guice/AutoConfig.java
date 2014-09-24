@@ -1,4 +1,4 @@
-package com.hubspot.dropwizard.guice;
+package br.com.ingenieux.dropwizard.guice;
 
 import io.dropwizard.Bundle;
 import io.dropwizard.lifecycle.Managed;

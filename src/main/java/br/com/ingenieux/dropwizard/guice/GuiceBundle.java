@@ -1,4 +1,4 @@
-package com.hubspot.dropwizard.guice;
+package br.com.ingenieux.dropwizard.guice;
 
 import com.google.common.base.Function;
 import com.google.common.base.Optional;
